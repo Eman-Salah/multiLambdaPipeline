@@ -8,6 +8,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - NewSamTemplate.yaml
-    - time/index.js
-    - love/indexOfLove.js
+    - **/*
