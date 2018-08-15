@@ -1,4 +1,5 @@
 //To-Test-State-2
+//TestUpdating one function
 var time = require('time');
 exports.handler = (event, context, callback) => {
     var currentTime = new time.Date(); 
