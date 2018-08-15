@@ -5,7 +5,7 @@ Resources:
   TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
+      Handler: time/index.handler
       Runtime: nodejs6.10
       CodeUri: ./
       AutoPublishAlias: timelive
@@ -20,7 +20,7 @@ Resources:
   LoveFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: indexOfLove.handler
+      Handler: love/indexOfLove.handler
       Runtime: nodejs6.10
       CodeUri: ./
       AutoPublishAlias: lovelive
