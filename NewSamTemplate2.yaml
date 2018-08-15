@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Outputs the time
+Resources:
+  LoveFunction:
+    Properties:
+      AutoPublishAlias: lovelive
+      CodeUri: s3://lambdapipeline/414831aa2129db329c54b7e3fcfff06d
+      DeploymentPreference:
+        Type: AllAtOnce
+      Events:
+        MyTimeApi:
+          Properties:
+            Method: GET
+            Path: /TimeResource2
+          Type: Api
+      Handler: love/indexOfLove.handler
+      Runtime: nodejs6.10
+    Type: AWS::Serverless::Function
+  TimeFunction:
+    Properties:
+      AutoPublishAlias: timelive
+      CodeUri: s3://lambdapipeline/414831aa2129db329c54b7e3fcfff06d
+      DeploymentPreference:
+        Type: AllAtOnce
+      Events:
+        MyTimeApi:
+          Properties:
+            Method: GET
+            Path: /TimeResource
+          Type: Api
+      Handler: time/index.handler
+      Runtime: nodejs6.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
